@@ -4,32 +4,38 @@
 # In[ ]:
 
 
-
+# Create list
+l=[1,2,3,4]
+print(l)
 
 
 # In[ ]:
 
 
-# Arrays and matrices
-
-import numpy as np
-
-# Create list
-l=[1,2,3,4]
-print(l)
-
 l=[[1,'c'],[3,4.5]]
 print(l)
 
+
+# In[ ]:
+
+
+l=[1,2,3,4]
 l=l+1
 
 
 # In[ ]:
 
 
+import numpy
+
 # Change a list into an array
-a=np.array([1,2,3,4])
+a=numpy.array([1,2,3,4])
 print(a)
+
+
+# In[ ]:
+
+
 a=a+1
 print(a)
 
@@ -38,7 +44,7 @@ print(a)
 
 
 # Create a matrix
-b=np.array([[1,2,3,4],[3,2,4,2],[4,8,7,1]])
+b=numpy.array([[1,2,3,4],[3,2,4,2],[4,8,7,1]])
 print(b)
 
 
@@ -46,7 +52,13 @@ print(b)
 
 
 # Shape of a matrix
-print(b.shape[1])
+print(b.shape)
+
+
+# In[ ]:
+
+
+print(b.shape[0])
 
 
 # In[ ]:
@@ -62,6 +74,13 @@ print(b[0,0])
 
 # Second line, third column
 print(b[1][2])
+
+
+# In[ ]:
+
+
+# Second line, third column
+print(b[1,2])
 
 
 # In[ ]:
@@ -103,8 +122,28 @@ print(b[::2,::2])
 
 
 # Transpose
+print(b.T)
+
+
+# In[ ]:
+
+
+# Square matrix
 b=b[0:3,0:3]
+print(b)
+
+
+# In[ ]:
+
+
+# Symmetric matrix
 print(b+b.T)
+
+
+# In[ ]:
+
+
+# Antisymmetric matrix
 print(b-b.T)
 
 
@@ -112,7 +151,7 @@ print(b-b.T)
 
 
 # Inverse matrix
-ib=np.linalg.inv(b)
+ib=numpy.linalg.inv(b)
 print(ib)
 
 
@@ -127,23 +166,47 @@ print(b*ib)
 
 
 # Matrix product
-print(np.dot(b,ib))
+print(numpy.dot(b,ib))
 
 
 # In[ ]:
 
 
 # Determinant
-print(np.linalg.det(b))
+print(numpy.linalg.det(b))
+
+
+# In[ ]:
+
+
+# Identity matrices
+print(numpy.eye(3))
+
+
+# In[ ]:
+
+
+# Null matrices
+print(numpy.zeros((3,4)))
+
+
+# In[ ]:
+
+
+# Constant matrix
+print(numpy.full((2,3), fill_value=0.5))
 
 
 # In[ ]:
 
 
 # Eigenvalues and eigenvectors
-evalue, evect = np.linalg.eig(b)
-print("Eigenvalues=",evalue)
-print("Eigenvectors=",evect)
+b=b+b.T
+evalue, evect = numpy.linalg.eig(b)
+print("Eigenvalues")
+print(evalue)
+print("Eigenvectors")
+print(evect)
 
 
 # In[ ]:
@@ -161,7 +224,9 @@ print(evect[:,0])
 
 c=b
 c[0,0]=-1
+print("c")
 print(c)
+print("b")
 print(b)
 
 
@@ -174,17 +239,18 @@ print(b)
 import copy
 c=copy.deepcopy(b)
 
-# Alternative
-#from copy import deepcopy
-#c=deepcopy(b)
-
 c[0,0]=-2
+print("c")
 print(c)
+print("b")
 print(b)
 
 
 # In[ ]:
 
 
+# Alternative
 
+from copy import deepcopy
+c=deepcopy(b)
 

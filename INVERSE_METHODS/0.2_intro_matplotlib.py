@@ -4,6 +4,13 @@
 # In[ ]:
 
 
+import sys
+get_ipython().system('conda install --yes --prefix {sys.prefix} numpy matplotlib')
+
+
+# In[ ]:
+
+
 import matplotlib.pyplot as plt
 import numpy as np
 
@@ -13,7 +20,7 @@ x = np.arange(0,10,0.2)
 y = x**2 + 1
 
 plt.plot(x,y)
-plt.title('y=x**2')
+plt.title('y=x**2+1')
 plt.xlabel('x')
 plt.ylabel('y')
 plt.show()
@@ -68,6 +75,7 @@ plt.show()
 # Changing axis range
 plt.plot(x,y,'k-')
 plt.xlim([2,8])
+plt.ylim([20,60])
 plt.show()
 
 
@@ -77,7 +85,7 @@ plt.show()
 # Adding labels
 plt.plot(x,y,'k-')
 plt.annotate('Hola!', xy=(4,16), xytext=(1, 80) )
-plt.annotate('y=x**2', xy=(4, 16), xytext=(2, 40), arrowprops=dict(facecolor='black', shrink=0.05) )
+plt.annotate('y=x**2+1', xy=(4, 16), xytext=(2, 40), arrowprops=dict(facecolor='black') )
 plt.show()
 
 
@@ -87,6 +95,7 @@ plt.show()
 # Logarithmic scale
 plt.plot(x,y,'k-')
 plt.yscale('log')
+plt.xscale('log')
 plt.show()
 
 
@@ -94,10 +103,10 @@ plt.show()
 
 
 # Polar diagrams
-ang = np.arange(0,2*np.pi,0.01)
+ang = np.arange(0,2*np.pi,0.1)
 r = np.cos(2*ang) + 1.5
 ax = plt.subplot(111, projection='polar')
-ax.plot(ang,r)
+ax.plot(ang,r,'kx')
 plt.show()
 
 
@@ -116,7 +125,6 @@ plt.plot(x1, y1, 'bo')
 
 plt.subplot(3,1,2)
 plt.plot(x1, y1, 'k')
-plt.ylim([-1.5,1.5])
 
 plt.subplot(3,1,3)
 plt.plot(x1, y1, 'r--')
@@ -140,10 +148,11 @@ plt.subplot(3,1,1)
 plt.plot(x1, f(x1), 'bo')
 
 plt.subplot(3,1,2)
-plt.plot(x1, f(x1), 'k')
+plt.plot(x1, f(x1+1), 'k')
+plt.xlim([2,4])
 
 plt.subplot(3,1,3)
-plt.plot(x1, f(x1), 'r--')
+plt.plot(x1, f(x1*2), 'r--')
 
 plt.show()
 

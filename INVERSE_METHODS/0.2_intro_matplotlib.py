@@ -1,16 +1,6 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# In[ ]:
-
-
-import sys
-get_ipython().system('conda install --yes --prefix {sys.prefix} numpy matplotlib')
-
-
-# In[ ]:
-
-
 import matplotlib.pyplot as plt
 import numpy as np
 
@@ -26,15 +16,9 @@ plt.ylabel('y')
 plt.show()
 
 
-# In[ ]:
-
-
 # Graphics with points
 plt.plot(x,y,'.')
 plt.show()
-
-
-# In[ ]:
 
 
 # Two graphics in one panel
@@ -44,16 +28,10 @@ plt.plot(x,y,'-b')
 plt.show()
 
 
-# In[ ]:
-
-
 # Two graphics in one panel
 # Black crosses and green dotted line
 plt.plot(x,y,'xk', x,y,':g')
 plt.show()
-
-
-# In[ ]:
 
 
 # Changing marker size 
@@ -61,15 +39,9 @@ plt.plot(x,y,'xk', markersize=10)
 plt.show()
 
 
-# In[ ]:
-
-
 # Changing line width
 plt.plot(x,y,'r-', linewidth=5)
 plt.show()
-
-
-# In[ ]:
 
 
 # Changing axis range
@@ -79,17 +51,11 @@ plt.ylim([20,60])
 plt.show()
 
 
-# In[ ]:
-
-
 # Adding labels
 plt.plot(x,y,'k-')
 plt.annotate('Hola!', xy=(4,16), xytext=(1, 80) )
 plt.annotate('y=x**2+1', xy=(4, 16), xytext=(2, 40), arrowprops=dict(facecolor='black') )
 plt.show()
-
-
-# In[ ]:
 
 
 # Logarithmic scale
@@ -99,18 +65,12 @@ plt.xscale('log')
 plt.show()
 
 
-# In[ ]:
-
-
 # Polar diagrams
 ang = np.arange(0,2*np.pi,0.1)
 r = np.cos(2*ang) + 1.5
 ax = plt.subplot(111, projection='polar')
 ax.plot(ang,r,'kx')
 plt.show()
-
-
-# In[ ]:
 
 
 # Multiple plots
@@ -130,9 +90,6 @@ plt.subplot(3,1,3)
 plt.plot(x1, y1, 'r--')
 
 plt.show()
-
-
-# In[ ]:
 
 
 # Multiple graphics with an arbitrary function

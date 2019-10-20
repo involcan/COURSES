@@ -1,8 +1,15 @@
 
-English
+ENGLISH
+
+Inverse Problems
 0.1 Introduction to basic linear algebra in Python: NumPy
 0.2 Basic scientific plotting in Python: Matplotlib
+1.0 Least squares
 
-Español
+
+ESPAÑOL
+
+Problemas Inversos
 0.1 Introducción al álgebra lineal en Python: NumPy
 0.2 Gráficos científicos básicos en Python: Matplotlib
+1.0 Mínimos cuadrados

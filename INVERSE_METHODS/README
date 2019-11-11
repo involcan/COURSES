@@ -4,7 +4,7 @@ ESPAÑOL
 Problemas Inversos
 0.1 Introducción al álgebra lineal en Python: NumPy
 0.2 Gráficos científicos básicos en Python: Matplotlib
-1.0 Introducción
+1.0 Introducción a los problemas inversos
 1.1 Mínimos cuadrados
 1.2 Decomposición de matrices
 1.3 Resolución
@@ -15,7 +15,7 @@ ENGLISH
 Inverse Problems
 0.1 Introduction to basic linear algebra in Python: NumPy
 0.2 Basic scientific plotting in Python: Matplotlib
-1.0 Introduction
+1.0 Introduction to inverse problems
 1.1 Least squares
 1.2 Matrix decomposition
 1.3 Resolution
